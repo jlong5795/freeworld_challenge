@@ -22,8 +22,6 @@ const StudentTable = () => {
         return student;
       })
     );
-
-    console.log(students);
   };
 
   const editStudent = (e, updatedStudent) => {
@@ -36,8 +34,6 @@ const StudentTable = () => {
         return student;
       })
     );
-
-    console.log(students);
   };
 
   const addStudent = () => {
@@ -65,9 +61,9 @@ const StudentTable = () => {
     // copy array to avoid mutation
     let studentsCopy = JSON.stringify(students);
 
-    let data = maximizeEarning(maxHours, JSON.parse(studentsCopy));
+    let data = maximizeEarning(parseInt(maxHours), JSON.parse(studentsCopy));
     setAccepted(data[0]);
-    console.log(accepted);
+    console.log(accepted)
   };
 
   return (
@@ -97,15 +93,19 @@ const StudentTable = () => {
         <button onClick={addStudent}>Add Student</button>
         <button onClick={() => setStudents([])}>Clear All</button>
       </div>
-      <label> Max Instruction Hours: 
+      <label>
+        {" "}
+        Max Instruction Hours:
         <input
-        className={styles.input}
+          className={styles.input}
           type="text"
           value={maxHours}
           onChange={(e) => setMaxHours(e.target.value)}
         />
       </label>
-      <button className={styles.evaluate} onClick={calculate}>Evaluate</button>
+      <button className={styles.evaluate} onClick={calculate}>
+        Evaluate
+      </button>
       {accepted ? <DisplayAccepted accepted={accepted} /> : null}
     </div>
   );
@@ -119,7 +119,6 @@ function maximizeEarning(
   acceptedStudentCache = {},
   orderedByEarningPotential = []
 ) {
-  // console.log('data', data)
   let usedHours = 0;
   let earnings = 0;
   let acceptedStudents = [];
@@ -129,16 +128,16 @@ function maximizeEarning(
       ? orderedByEarningPotential
       : data.sort(function (a, b) {
           return (
-            earningPerInstructionalHour(b.potential, b.hours) -
-            earningPerInstructionalHour(a.potential, a.hours)
+            earningPerInstructionalHour(parseInt(b.potential), parseInt(b.hours)) -
+            earningPerInstructionalHour(parseInt(a.potential), parseInt(a.hours))
           );
         });
 
   let currentIndex = 0;
   while (usedHours < hours && currentIndex < data.length) {
-    if (data[currentIndex].hours + usedHours <= hours) {
-      usedHours += data[currentIndex].hours;
-      earnings += data[currentIndex].potential;
+    if (parseInt(data[currentIndex].hours) + usedHours <= hours) {
+      usedHours += parseInt(data[currentIndex].hours);
+      earnings += parseInt(data[currentIndex].potential);
       acceptedStudents.push(data[currentIndex].name);
     }
     currentIndex++;

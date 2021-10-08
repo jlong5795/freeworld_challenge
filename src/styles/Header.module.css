@@ -1,18 +1,18 @@
 .header {
-    background-color: black;
-    display: flex;
+  background-color: black;
+  display: flex;
 }
 
 .logo {
-    width: 20%;
-    padding: 2%;
+  width: 20%;
+  padding: 2%;
 }
 
 .title {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 1.75rem;
-    width: 70%;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.75rem;
+  width: 70%;
+  margin: auto;
 }

@@ -16,27 +16,27 @@ const TableRowForm = ({ onSubmit, student }) => {
 
   return (
     <form className={styles.form} onSubmit={(e) => onSubmit(e, form)}>
-        <input
+      <input
         className={styles.inputs}
-          name="name"
-          placeholder="Student Name"
-          value={form.name}
-          onChange={onChange}
-        />
-        <input
+        name="name"
+        placeholder="Student Name"
+        value={form.name}
+        onChange={onChange}
+      />
+      <input
         className={styles.inputs}
-          name="potential"
-          placeholder="Potential Earnings"
-          value={form.potential}
-          onChange={onChange}
-        />
-        <input
+        name="potential"
+        placeholder="Potential Earnings"
+        value={form.potential}
+        onChange={onChange}
+      />
+      <input
         className={styles.inputs}
-          name="hours"
-          placeholder="Instruction Hours"
-          value={form.hours}
-          onChange={onChange}
-        />
+        name="hours"
+        placeholder="Instruction Hours"
+        value={form.hours}
+        onChange={onChange}
+      />
       <span>
         <button type="submit">Update</button>
         <button onClick={(e) => toggleForm(e)}>Cancel</button>

@@ -1,12 +1,9 @@
-
 const DisplayAccepted = ({ accepted }) => {
-    const resultString = `Max earnings of $${accepted.earnings} with ${accepted.students.toString()}`
+  let resultString = `Max earnings of $${
+    accepted.earnings
+  } with ${accepted.students.toString()}`;
 
-    return (
-        <>
-        {resultString}
-        </>
-    )
-}
+  return <>{resultString}</>;
+};
 
 export default DisplayAccepted;

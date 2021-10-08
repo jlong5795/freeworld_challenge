@@ -1,39 +1,39 @@
 {
-    "exampleStudents": [
-        {
-            "id": 1,
-            "name": "Jane",
-            "potential": 1000,
-            "hours": 3,
-            "showForm": false
-          },
-          {
-            "id": 2,
-            "name": "Bob",
-            "potential": 3000,
-            "hours": 5,
-            "showForm": false
-          },
-          {
-            "id": 3,
-            "name": "Mark",
-            "potential": 2700,
-            "hours": 4,
-            "showForm": false
-          },
-          {
-            "id": 4,
-            "name": "Jill",
-            "potential": 5000,
-            "hours": 8,
-            "showForm": false
-          },
-          {
-            "id": 5,
-            "name": "Don",
-            "potential": 3600,
-            "hours": 5,
-            "showForm": false
-          }
-    ]
+  "exampleStudents": [
+    {
+      "id": 1,
+      "name": "Jane",
+      "potential": 1000,
+      "hours": 3,
+      "showForm": false
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "potential": 3000,
+      "hours": 5,
+      "showForm": false
+    },
+    {
+      "id": 3,
+      "name": "Mark",
+      "potential": 2700,
+      "hours": 4,
+      "showForm": false
+    },
+    {
+      "id": 4,
+      "name": "Jill",
+      "potential": 5000,
+      "hours": 8,
+      "showForm": false
+    },
+    {
+      "id": 5,
+      "name": "Don",
+      "potential": 3600,
+      "hours": 5,
+      "showForm": false
+    }
+  ]
 }
