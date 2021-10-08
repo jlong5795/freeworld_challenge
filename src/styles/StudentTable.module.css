@@ -1,0 +1,37 @@
+.container {
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.labels {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 3fr;
+}
+
+.labels > span {
+    text-decoration: underline;
+}
+
+.options {
+    margin: 0 auto;
+}
+
+.listControls {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px;
+}
+
+.hours {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    width: 25%;
+}
+
+.evaluate {
+    display: block;
+    margin: 15px auto;
+}
